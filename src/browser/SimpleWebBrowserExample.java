@@ -9,6 +9,7 @@ import hello.QueryParserParser;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Panel;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.MouseAdapter;
@@ -68,7 +69,7 @@ public class SimpleWebBrowserExample extends JFrame {
 		super();
 		setBounds(100, 100, 900, 600);
 		Dimension size = new Dimension(430, 100);
-		setTitle("To be or not to be");
+		setTitle("–î—ç–Ω—á–∏–∫, –î—ç-—ç-—ç-—ç-—ç-—ç-—ç–Ω—á–∏–∫ :D");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setMinimumSize(size);
 		setLayout(new BorderLayout());
@@ -173,17 +174,16 @@ public class SimpleWebBrowserExample extends JFrame {
 	private void initSearchStuff(JPanel webBrowserPanel) {
 		searchField = new JTextField("");
 		webBrowserPanel.add(searchField, BorderLayout.PAGE_START);
-		JButton setSearchDirectory = new JButton("”Í‡Á‡Ú¸œÓËÒÍÓ‚Û˛œ‡ÔÍÛ");
-		webBrowserPanel.add(setSearchDirectory, BorderLayout.PAGE_END);
-<<<<<<< HEAD
-		JButton search = new JButton("œÓËÒÍ");
-=======
+		JButton setSearchDirectory = new JButton("SetSearchDirectory");
+		Panel buttons = new Panel();
+		buttons.add(setSearchDirectory);
 		
 		JButton search = new JButton("–ü–æ–∏—Å–∫");
 		search.setBackground(Color.WHITE);
->>>>>>> 92f15d12bb133b848a6b2f9a528d75edd94550c5
 		
-		webBrowserPanel.add(search, BorderLayout.PAGE_END);
+		buttons.add(search);
+		
+		webBrowserPanel.add(buttons, BorderLayout.PAGE_END);
 		add(webBrowserPanel, BorderLayout.CENTER);
 
 		setSearchDirectory.addMouseListener(new MouseAdapter() {

@@ -41,7 +41,10 @@ main_tag returns [StringBuilder result]
 head_tag
 	:	'head' ('[')?
 		{
-	  		builder.append("<head>");
+	  		builder.append(
+	  		  "<head>" +
+	  		  "<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">" 
+	  		);
 	  		//builder.levelUp();
 	  	}
 	 	 (title_tag | tag)*
