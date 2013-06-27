@@ -1,4 +1,4 @@
-// $ANTLR 3.5 D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g 2013-06-03 22:23:12
+// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g 2013-06-27 03:26:47
 
   package hello;
 
@@ -35,15 +35,15 @@ public class QueryParserLexer extends Lexer {
 	public QueryParserLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g"; }
+	@Override public String getGrammarFileName() { return "/Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g"; }
 
 	// $ANTLR start "T__9"
 	public final void mT__9() throws RecognitionException {
 		try {
 			int _type = T__9;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:11:6: ( '*find every key node*' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:11:8: '*find every key node*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:11:6: ( '*find every key node*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:11:8: '*find every key node*'
 			{
 			match("*find every key node*"); 
 
@@ -63,8 +63,8 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:12:7: ( '*find every relation*' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:12:9: '*find every relation*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:12:7: ( '*find every relation*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:12:9: '*find every relation*'
 			{
 			match("*find every relation*"); 
 
@@ -84,8 +84,8 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:13:7: ( '*find subclass of*' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:13:9: '*find subclass of*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:13:7: ( '*find subclass of*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:13:9: '*find subclass of*'
 			{
 			match("*find subclass of*"); 
 
@@ -105,8 +105,8 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:14:7: ( '*mass of*' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:14:9: '*mass of*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:14:7: ( '*mass of*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:14:9: '*mass of*'
 			{
 			match("*mass of*"); 
 
@@ -126,8 +126,8 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = T__13;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:15:7: ( '*type of*' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:15:9: '*type of*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:15:7: ( '*type of*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:15:9: '*type of*'
 			{
 			match("*type of*"); 
 
@@ -147,10 +147,10 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = DIGITS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:48:8: ( ( '0' .. '9' )+ )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:48:10: ( '0' .. '9' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:48:8: ( ( '0' .. '9' )+ )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:48:10: ( '0' .. '9' )+
 			{
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:48:10: ( '0' .. '9' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:48:10: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -162,7 +162,7 @@ public class QueryParserLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -199,8 +199,8 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = LETTER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:49:8: ( 'a' .. 'z' | 'A' .. 'Z' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:49:8: ( 'a' .. 'z' | 'A' .. 'Z' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -226,10 +226,10 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:50:8: ( ( LETTER )+ )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:50:10: ( LETTER )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:50:8: ( ( LETTER )+ )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:50:10: ( LETTER )+
 			{
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:50:10: ( LETTER )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:50:10: ( LETTER )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -241,7 +241,7 @@ public class QueryParserLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -280,12 +280,12 @@ public class QueryParserLexer extends Lexer {
 			int _channel = DEFAULT_TOKEN_CHANNEL;
 			int c;
 
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:52:2: ( '*' ( '/' '*' |c=~ ( '*' ) )* '*' )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:52:5: '*' ( '/' '*' |c=~ ( '*' ) )* '*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:52:2: ( '*' ( '/' '*' |c=~ ( '*' ) )* '*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:52:5: '*' ( '/' '*' |c=~ ( '*' ) )* '*'
 			{
 			match('*'); 
 			 	StringBuilder temp = new StringBuilder();
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:54:3: ( '/' '*' |c=~ ( '*' ) )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:54:3: ( '/' '*' |c=~ ( '*' ) )*
 			loop3:
 			while (true) {
 				int alt3=3;
@@ -313,7 +313,7 @@ public class QueryParserLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:54:4: '/' '*'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:54:4: '/' '*'
 					{
 					match('/'); 
 					match('*'); 
@@ -321,7 +321,7 @@ public class QueryParserLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:55:5: c=~ ( '*' )
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:55:5: c=~ ( '*' )
 					{
 					c= input.LA(1);
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= ')')||(input.LA(1) >= '+' && input.LA(1) <= '\uFFFF') ) {
@@ -359,10 +359,10 @@ public class QueryParserLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:60:4: ( ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+ )
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:60:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:60:4: ( ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+ )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:60:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
 			{
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:60:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:60:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -374,7 +374,7 @@ public class QueryParserLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
 						input.consume();
@@ -409,75 +409,75 @@ public class QueryParserLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | DIGITS | LETTER | STRING | STR | WS )
+		// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | DIGITS | LETTER | STRING | STR | WS )
 		int alt5=10;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:10: T__9
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:10: T__9
 				{
 				mT__9(); 
 
 				}
 				break;
 			case 2 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:15: T__10
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:15: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 3 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:21: T__11
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:21: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 4 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:27: T__12
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:27: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 5 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:33: T__13
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:33: T__13
 				{
 				mT__13(); 
 
 				}
 				break;
 			case 6 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:39: DIGITS
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:39: DIGITS
 				{
 				mDIGITS(); 
 
 				}
 				break;
 			case 7 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:46: LETTER
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:46: LETTER
 				{
 				mLETTER(); 
 
 				}
 				break;
 			case 8 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:53: STRING
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:53: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
 			case 9 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:60: STR
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:60: STR
 				{
 				mSTR(); 
 
 				}
 				break;
 			case 10 :
-				// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:1:64: WS
+				// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:1:64: WS
 				{
 				mWS(); 
 

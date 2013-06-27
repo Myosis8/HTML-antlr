@@ -1,4 +1,4 @@
-// $ANTLR 3.5 D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g 2013-06-03 22:23:12
+// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g 2013-06-27 03:26:47
  
   package hello;
   import search.Query;
@@ -44,14 +44,14 @@ public class QueryParserParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return QueryParserParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g"; }
+	@Override public String getGrammarFileName() { return "/Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g"; }
 
 
 
 
 
 	// $ANTLR start "page"
-	// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:15:1: page returns [Query result] : ( '*find every key node*' | '*find every relation*' | '*mass of*' STRING | '*find subclass of*' STRING | '*type of*' STRING | STR );
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:15:1: page returns [Query result] : ( '*find every key node*' | '*find every relation*' | '*mass of*' STRING | '*find subclass of*' STRING | '*type of*' STRING | STR );
 	public final Query page() throws RecognitionException {
 		Query result = null;
 
@@ -61,7 +61,7 @@ public class QueryParserParser extends Parser {
 		Token STRING3=null;
 
 		try {
-			// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:16:2: ( '*find every key node*' | '*find every relation*' | '*mass of*' STRING | '*find subclass of*' STRING | '*type of*' STRING | STR )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:16:2: ( '*find every key node*' | '*find every relation*' | '*mass of*' STRING | '*find subclass of*' STRING | '*type of*' STRING | STR )
 			int alt1=6;
 			switch ( input.LA(1) ) {
 			case 9:
@@ -101,7 +101,7 @@ public class QueryParserParser extends Parser {
 			}
 			switch (alt1) {
 				case 1 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:16:4: '*find every key node*'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:16:4: '*find every key node*'
 					{
 					match(input,9,FOLLOW_9_in_page46); 
 
@@ -111,7 +111,7 @@ public class QueryParserParser extends Parser {
 					}
 					break;
 				case 2 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:21:4: '*find every relation*'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:21:4: '*find every relation*'
 					{
 					match(input,10,FOLLOW_10_in_page55); 
 
@@ -121,7 +121,7 @@ public class QueryParserParser extends Parser {
 					}
 					break;
 				case 3 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:26:4: '*mass of*' STRING
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:26:4: '*mass of*' STRING
 					{
 					match(input,12,FOLLOW_12_in_page64); 
 					STRING1=(Token)match(input,STRING,FOLLOW_STRING_in_page66); 
@@ -132,7 +132,7 @@ public class QueryParserParser extends Parser {
 					}
 					break;
 				case 4 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:31:4: '*find subclass of*' STRING
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:31:4: '*find subclass of*' STRING
 					{
 					match(input,11,FOLLOW_11_in_page76); 
 					STRING2=(Token)match(input,STRING,FOLLOW_STRING_in_page78); 
@@ -143,7 +143,7 @@ public class QueryParserParser extends Parser {
 					}
 					break;
 				case 5 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:36:4: '*type of*' STRING
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:36:4: '*type of*' STRING
 					{
 					match(input,13,FOLLOW_13_in_page87); 
 					STRING3=(Token)match(input,STRING,FOLLOW_STRING_in_page89); 
@@ -154,7 +154,7 @@ public class QueryParserParser extends Parser {
 					}
 					break;
 				case 6 :
-					// D:\\my documents\\University\\workspace\\HTML-antlr\\src\\hello\\QueryParser.g:41:4: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g:41:4: STR
 					{
 					match(input,STR,FOLLOW_STR_in_page98); 
 
