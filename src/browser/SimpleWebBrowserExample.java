@@ -172,7 +172,7 @@ public class SimpleWebBrowserExample extends JFrame {
 	}
 
 	private void initSearchStuff(JPanel webBrowserPanel) {
-		searchField = new JTextField("");
+		searchField = new JTextField(SITE_DIRECTORY+FILESEP);
 		
 		webBrowserPanel.add(searchField, BorderLayout.PAGE_START);
 
