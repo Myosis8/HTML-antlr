@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g 2013-06-27 03:26:47
+// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/QueryParser.g 2013-06-27 16:12:06
  
   package hello;
   import search.Query;
