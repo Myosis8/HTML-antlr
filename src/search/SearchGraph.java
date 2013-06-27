@@ -1,19 +1,13 @@
 package search;
 
 import java.util.Set;
-import org.jgraph.JGraph;
-import org.jgraph.graph.DefaultGraphCell;
-import org.jgraph.graph.GraphConstants;
-import org.jgrapht.EdgeFactory;
-import org.jgrapht.ext.JGraphModelAdapter;
-import org.jgrapht.graph.ClassBasedEdgeFactory;
-import org.jgrapht.graph.ListenableDirectedGraph;
-import org.jgrapht.graph.DefaultEdge;
 
 
 import org.jgrapht.graph.SimpleDirectedGraph;
 
 public class SearchGraph extends SimpleDirectedGraph< KeyNode, RelationEdge>{
+
+	private static final long serialVersionUID = 1L;
 
 	private SearchGraph(Class<? extends  RelationEdge > arg0){
 		super(arg0);	

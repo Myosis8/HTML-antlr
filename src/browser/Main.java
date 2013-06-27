@@ -3,8 +3,8 @@ package browser;
 import browser.SimpleWebBrowserExample;
 import java.util.*;
 
-import chrriis.dj.nativeswing.swtimpl.NativeInterface;   
-import chrriis.dj.nativeswing.NativeSwing;   
+import chrriis.dj.nativeswing.swtimpl.NativeInterface;
+import chrriis.dj.nativeswing.NativeSwing;
 import javax.swing.SwingUtilities;
 
 import java.io.*;
@@ -13,8 +13,8 @@ class Main {
 	private static final String APP_NAME = "Serge's browser";
 	private static File _log;
 	private static FileWriter _logWriter;
-	
-    public static void main(String[] args) {
+
+	public static void main(String[] args) {
     	if(args.length < 1 || args[0] != "--no-log") {
     		try {
     			_log = new File("browser.log");
@@ -35,15 +35,18 @@ class Main {
             NativeInterface.open();
 
             SwingUtilities.invokeLater(new Runnable() {
-              public void run() {
-                  try {
-                  SimpleWebBrowserExample browser = new SimpleWebBrowserExample();
-              }
-              catch(Exception e) {
-                  
-              }
-              }
-            });
+				public void run()
+				{
+				    try
+				    {
+				  	  @SuppressWarnings("unused")
+					SimpleWebBrowserExample browser = new SimpleWebBrowserExample();
+				    }
+				    catch(Exception e) {
+				        
+				    }
+				}
+			});
             NativeInterface.runEventPump();
         }
         catch(Exception e) {
@@ -58,8 +61,9 @@ class Main {
     }
 
 	protected static void log(String str) throws IOException {
-		if(_logWriter != null) {
-			_logWriter.write((new Date()).toString() + "["+APP_NAME+"]"+": " + str + "\n");
+		if (_logWriter != null) {
+			_logWriter.write((new Date()).toString() + "[" + APP_NAME + "]"
+					+ ": " + str + "\n");
 			_logWriter.flush();
 		}
 	}
