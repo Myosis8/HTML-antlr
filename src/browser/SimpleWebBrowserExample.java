@@ -64,7 +64,7 @@ public class SimpleWebBrowserExample extends JFrame {
 		super();
 		setBounds(100, 100, 900, 600);
 		Dimension size = new Dimension(430, 100);
-		setTitle("Дэнчик, Дэ-э-э-э-э-э-энчик :D");
+		setTitle("Р”СЌРЅС‡РёРє, Р”СЌ-СЌ-СЌ-СЌ-СЌ-СЌ-СЌРЅС‡РёРє :D");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setMinimumSize(size);
 		setLayout(new BorderLayout());
@@ -170,7 +170,7 @@ public class SimpleWebBrowserExample extends JFrame {
 		webBrowserPanel.add(searchField, BorderLayout.PAGE_START);
 		JButton setSearchDirectory = new JButton("SetSearchDirectory");
 		webBrowserPanel.add(setSearchDirectory, BorderLayout.PAGE_END);
-		JButton search = new JButton("Поиск");
+		JButton search = new JButton("РџРѕРёСЃРє");
 		
 		webBrowserPanel.add(search, BorderLayout.WEST);
 		add(webBrowserPanel, BorderLayout.CENTER);
