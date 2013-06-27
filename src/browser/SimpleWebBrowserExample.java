@@ -9,6 +9,7 @@ import hello.QueryParserParser;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Panel;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.MouseAdapter;
@@ -174,12 +175,15 @@ public class SimpleWebBrowserExample extends JFrame {
 		searchField = new JTextField("");
 		webBrowserPanel.add(searchField, BorderLayout.PAGE_START);
 		JButton setSearchDirectory = new JButton("SetSearchDirectory");
-		webBrowserPanel.add(setSearchDirectory, BorderLayout.PAGE_END);
+		Panel buttons = new Panel();
+		buttons.add(setSearchDirectory);
 		
 		JButton search = new JButton("Поиск");
 		search.setBackground(Color.WHITE);
 		
-		webBrowserPanel.add(search, BorderLayout.PAGE_END);
+		buttons.add(search);
+		
+		webBrowserPanel.add(buttons, BorderLayout.PAGE_END);
 		add(webBrowserPanel, BorderLayout.CENTER);
 
 		setSearchDirectory.addMouseListener(new MouseAdapter() {

@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g 2013-06-27 16:12:03
+// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g 2013-06-27 23:22:56
 
   package hello;
 
@@ -1112,10 +1112,10 @@ public class GrammarLexer extends Lexer {
 		try {
 			int _type = DIGITS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:389:8: ( ( '0' .. '9' )+ )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:389:10: ( '0' .. '9' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:392:8: ( ( '0' .. '9' )+ )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:392:10: ( '0' .. '9' )+
 			{
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:389:10: ( '0' .. '9' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:392:10: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -1164,7 +1164,7 @@ public class GrammarLexer extends Lexer {
 		try {
 			int _type = LETTER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:390:8: ( 'a' .. 'z' | 'A' .. 'Z' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:393:8: ( 'a' .. 'z' | 'A' .. 'Z' )
 			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -1191,10 +1191,10 @@ public class GrammarLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:391:8: ( ( LETTER )+ )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:391:10: ( LETTER )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:394:8: ( ( LETTER )+ )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:394:10: ( LETTER )+
 			{
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:391:10: ( LETTER )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:394:10: ( LETTER )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -1245,12 +1245,12 @@ public class GrammarLexer extends Lexer {
 			int _channel = DEFAULT_TOKEN_CHANNEL;
 			int c;
 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:393:2: ( '*' ( '/' '*' |c=~ ( '*' ) )* '*' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:393:5: '*' ( '/' '*' |c=~ ( '*' ) )* '*'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:396:2: ( '*' ( '/' '*' |c=~ ( '*' ) )* '*' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:396:5: '*' ( '/' '*' |c=~ ( '*' ) )* '*'
 			{
 			match('*'); 
 			 	StringBuilder temp = new StringBuilder();
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:395:3: ( '/' '*' |c=~ ( '*' ) )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:398:3: ( '/' '*' |c=~ ( '*' ) )*
 			loop3:
 			while (true) {
 				int alt3=3;
@@ -1278,7 +1278,7 @@ public class GrammarLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:395:4: '/' '*'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:398:4: '/' '*'
 					{
 					match('/'); 
 					match('*'); 
@@ -1286,7 +1286,7 @@ public class GrammarLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:396:5: c=~ ( '*' )
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:399:5: c=~ ( '*' )
 					{
 					c= input.LA(1);
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= ')')||(input.LA(1) >= '+' && input.LA(1) <= '\uFFFF') ) {
@@ -1324,10 +1324,10 @@ public class GrammarLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:401:4: ( ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+ )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:401:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:404:4: ( ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+ )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:404:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
 			{
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:401:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:404:6: ( ' ' | '\\t' | '\\n' | '\\f' | '\\r' )+
 			int cnt4=0;
 			loop4:
 			while (true) {

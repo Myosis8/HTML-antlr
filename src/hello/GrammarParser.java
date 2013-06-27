@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g 2013-06-27 16:12:02
+// $ANTLR 3.5 /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g 2013-06-27 23:22:56
 
   package hello;  
   import java.lang.StringBuilder;
@@ -219,10 +219,13 @@ public class GrammarParser extends Parser {
 			}
 
 
-				  		builder.append("<head>");
+				  		builder.append(
+				  		  "<head>" +
+				  		  "<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">" 
+				  		);
 				  		//builder.levelUp();
 				  	
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:47:5: ( title_tag | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:50:5: ( title_tag | tag )*
 			loop3:
 			while (true) {
 				int alt3=3;
@@ -236,7 +239,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt3) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:47:6: title_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:50:6: title_tag
 					{
 					pushFollow(FOLLOW_title_tag_in_head_tag143);
 					title_tag();
@@ -245,7 +248,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:47:18: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:50:18: tag
 					{
 					pushFollow(FOLLOW_tag_in_head_tag147);
 					tag();
@@ -279,16 +282,16 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "body_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:53:1: body_tag : 'body' ( '[' )? ( STR | tag )* 'end_body' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:56:1: body_tag : 'body' ( '[' )? ( STR | tag )* 'end_body' ;
 	public final void body_tag() throws RecognitionException {
 		Token STR1=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:54:2: ( 'body' ( '[' )? ( STR | tag )* 'end_body' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:54:4: 'body' ( '[' )? ( STR | tag )* 'end_body'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:57:2: ( 'body' ( '[' )? ( STR | tag )* 'end_body' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:57:4: 'body' ( '[' )? ( STR | tag )* 'end_body'
 			{
 			match(input,13,FOLLOW_13_in_body_tag170); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:54:11: ( '[' )?
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:57:11: ( '[' )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==11) ) {
@@ -296,7 +299,7 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt4) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:54:12: '['
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:57:12: '['
 					{
 					match(input,11,FOLLOW_11_in_body_tag173); 
 					}
@@ -308,7 +311,7 @@ public class GrammarParser extends Parser {
 						builder.append("<body>");
 						//builder.levelUp();
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:59:4: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:62:4: ( STR | tag )*
 			loop5:
 			while (true) {
 				int alt5=3;
@@ -322,14 +325,14 @@ public class GrammarParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:59:5: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:62:5: STR
 					{
 					STR1=(Token)match(input,STR,FOLLOW_STR_in_body_tag185); 
 					builder.append((STR1!=null?STR1.getText():null));
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:60:5: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:63:5: tag
 					{
 					pushFollow(FOLLOW_tag_in_body_tag193);
 					tag();
@@ -364,10 +367,10 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:67:1: tag : ( paragraph | new_line_tag | font_tag | bold_tag | italic_tag | u_line_tag | image_tag | link_tag | key_Subject | key_Text | key_Image | relation_tag );
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:70:1: tag : ( paragraph | new_line_tag | font_tag | bold_tag | italic_tag | u_line_tag | image_tag | link_tag | key_Subject | key_Text | key_Image | relation_tag );
 	public final void tag() throws RecognitionException {
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:68:2: ( paragraph | new_line_tag | font_tag | bold_tag | italic_tag | u_line_tag | image_tag | link_tag | key_Subject | key_Text | key_Image | relation_tag )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:71:2: ( paragraph | new_line_tag | font_tag | bold_tag | italic_tag | u_line_tag | image_tag | link_tag | key_Subject | key_Text | key_Image | relation_tag )
 			int alt6=12;
 			switch ( input.LA(1) ) {
 			case 48:
@@ -437,7 +440,7 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:68:4: paragraph
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:71:4: paragraph
 					{
 					pushFollow(FOLLOW_paragraph_in_tag218);
 					paragraph();
@@ -446,7 +449,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:69:4: new_line_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:72:4: new_line_tag
 					{
 					pushFollow(FOLLOW_new_line_tag_in_tag223);
 					new_line_tag();
@@ -455,7 +458,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:70:4: font_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:73:4: font_tag
 					{
 					pushFollow(FOLLOW_font_tag_in_tag228);
 					font_tag();
@@ -464,7 +467,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:71:4: bold_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:74:4: bold_tag
 					{
 					pushFollow(FOLLOW_bold_tag_in_tag233);
 					bold_tag();
@@ -473,7 +476,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:72:4: italic_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:75:4: italic_tag
 					{
 					pushFollow(FOLLOW_italic_tag_in_tag238);
 					italic_tag();
@@ -482,7 +485,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:73:4: u_line_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:76:4: u_line_tag
 					{
 					pushFollow(FOLLOW_u_line_tag_in_tag243);
 					u_line_tag();
@@ -491,7 +494,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:74:4: image_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:77:4: image_tag
 					{
 					pushFollow(FOLLOW_image_tag_in_tag248);
 					image_tag();
@@ -500,7 +503,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:75:4: link_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:78:4: link_tag
 					{
 					pushFollow(FOLLOW_link_tag_in_tag253);
 					link_tag();
@@ -509,7 +512,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:76:4: key_Subject
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:79:4: key_Subject
 					{
 					pushFollow(FOLLOW_key_Subject_in_tag258);
 					key_Subject();
@@ -518,7 +521,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 10 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:77:4: key_Text
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:80:4: key_Text
 					{
 					pushFollow(FOLLOW_key_Text_in_tag263);
 					key_Text();
@@ -527,7 +530,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 11 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:78:4: key_Image
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:81:4: key_Image
 					{
 					pushFollow(FOLLOW_key_Image_in_tag268);
 					key_Image();
@@ -536,7 +539,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 12 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:79:4: relation_tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:82:4: relation_tag
 					{
 					pushFollow(FOLLOW_relation_tag_in_tag273);
 					relation_tag();
@@ -560,13 +563,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "paragraph"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:83:1: paragraph : 'paragraph' '(' ( text_atribute )* ')' ( STR | tag )* 'end_paragraph' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:86:1: paragraph : 'paragraph' '(' ( text_atribute )* ')' ( STR | tag )* 'end_paragraph' ;
 	public final void paragraph() throws RecognitionException {
 		Token STR2=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:84:2: ( 'paragraph' '(' ( text_atribute )* ')' ( STR | tag )* 'end_paragraph' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:85:3: 'paragraph' '(' ( text_atribute )* ')' ( STR | tag )* 'end_paragraph'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:87:2: ( 'paragraph' '(' ( text_atribute )* ')' ( STR | tag )* 'end_paragraph' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:88:3: 'paragraph' '(' ( text_atribute )* ')' ( STR | tag )* 'end_paragraph'
 			{
 
 						builder.levelUp();
@@ -574,7 +577,7 @@ public class GrammarParser extends Parser {
 					
 			match(input,48,FOLLOW_48_in_paragraph295); 
 			match(input,9,FOLLOW_9_in_paragraph297); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:89:18: ( text_atribute )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:92:18: ( text_atribute )*
 			loop7:
 			while (true) {
 				int alt7=2;
@@ -585,7 +588,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt7) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:89:19: text_atribute
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:92:19: text_atribute
 					{
 					pushFollow(FOLLOW_text_atribute_in_paragraph299);
 					text_atribute();
@@ -603,7 +606,7 @@ public class GrammarParser extends Parser {
 
 						builder.appendN(">");
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:93:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:96:3: ( STR | tag )*
 			loop8:
 			while (true) {
 				int alt8=3;
@@ -617,14 +620,14 @@ public class GrammarParser extends Parser {
 
 				switch (alt8) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:93:4: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:96:4: STR
 					{
 					STR2=(Token)match(input,STR,FOLLOW_STR_in_paragraph311); 
 					builder.append((STR2!=null?STR2.getText():null));
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:95:3: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:98:3: tag
 					{
 					pushFollow(FOLLOW_tag_in_paragraph324);
 					tag();
@@ -659,14 +662,14 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "new_line_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:103:1: new_line_tag : 'new_line' ( '[' )? ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:106:1: new_line_tag : 'new_line' ( '[' )? ;
 	public final void new_line_tag() throws RecognitionException {
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:104:2: ( 'new_line' ( '[' )? )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:104:4: 'new_line' ( '[' )?
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:107:2: ( 'new_line' ( '[' )? )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:107:4: 'new_line' ( '[' )?
 			{
 			match(input,47,FOLLOW_47_in_new_line_tag346); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:104:15: ( '[' )?
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:107:15: ( '[' )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==11) ) {
@@ -674,7 +677,7 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:104:16: '['
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:107:16: '['
 					{
 					match(input,11,FOLLOW_11_in_new_line_tag349); 
 					}
@@ -703,17 +706,17 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "title_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:111:1: title_tag : 'title' ( '[' )? ( STR | tag )* 'end_title' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:114:1: title_tag : 'title' ( '[' )? ( STR | tag )* 'end_title' ;
 	public final void title_tag() throws RecognitionException {
 		Token STR3=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:112:2: ( 'title' ( '[' )? ( STR | tag )* 'end_title' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:112:4: 'title' ( '[' )? ( STR | tag )* 'end_title'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:115:2: ( 'title' ( '[' )? ( STR | tag )* 'end_title' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:115:4: 'title' ( '[' )? ( STR | tag )* 'end_title'
 			{
 				builder.levelUp();
 			match(input,54,FOLLOW_54_in_title_tag370); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:113:11: ( '[' )?
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:116:11: ( '[' )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0==11) ) {
@@ -721,7 +724,7 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:113:12: '['
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:116:12: '['
 					{
 					match(input,11,FOLLOW_11_in_title_tag373); 
 					}
@@ -730,7 +733,7 @@ public class GrammarParser extends Parser {
 			}
 
 				builder.append("<title>");
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:115:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:118:3: ( STR | tag )*
 			loop11:
 			while (true) {
 				int alt11=3;
@@ -744,7 +747,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:115:4: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:118:4: STR
 					{
 					STR3=(Token)match(input,STR,FOLLOW_STR_in_title_tag387); 
 
@@ -755,7 +758,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:122:3: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:125:3: tag
 					{
 					pushFollow(FOLLOW_tag_in_title_tag401);
 					tag();
@@ -790,11 +793,11 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "image_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:130:1: image_tag : 'image' '(' source_atribute ( image_atribute )* ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:133:1: image_tag : 'image' '(' source_atribute ( image_atribute )* ')' ;
 	public final void image_tag() throws RecognitionException {
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:131:2: ( 'image' '(' source_atribute ( image_atribute )* ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:132:3: 'image' '(' source_atribute ( image_atribute )* ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:134:2: ( 'image' '(' source_atribute ( image_atribute )* ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:135:3: 'image' '(' source_atribute ( image_atribute )* ')'
 			{
 
 						builder.levelUp();
@@ -806,7 +809,7 @@ public class GrammarParser extends Parser {
 			source_atribute();
 			state._fsp--;
 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:136:32: ( image_atribute )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:139:32: ( image_atribute )*
 			loop12:
 			while (true) {
 				int alt12=2;
@@ -817,7 +820,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt12) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:136:33: image_atribute
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:139:33: image_atribute
 					{
 					pushFollow(FOLLOW_image_atribute_in_image_tag443);
 					image_atribute();
@@ -852,13 +855,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "font_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:143:1: font_tag : 'font' '(' ( font_atribute )* ')' ( STR | tag )* 'end_font' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:146:1: font_tag : 'font' '(' ( font_atribute )* ')' ( STR | tag )* 'end_font' ;
 	public final void font_tag() throws RecognitionException {
 		Token STR4=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:144:2: ( 'font' '(' ( font_atribute )* ')' ( STR | tag )* 'end_font' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:145:3: 'font' '(' ( font_atribute )* ')' ( STR | tag )* 'end_font'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:147:2: ( 'font' '(' ( font_atribute )* ')' ( STR | tag )* 'end_font' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:148:3: 'font' '(' ( font_atribute )* ')' ( STR | tag )* 'end_font'
 			{
 
 						builder.levelUp();
@@ -866,7 +869,7 @@ public class GrammarParser extends Parser {
 					
 			match(input,31,FOLLOW_31_in_font_tag473); 
 			match(input,9,FOLLOW_9_in_font_tag475); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:149:13: ( font_atribute )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:152:13: ( font_atribute )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -877,7 +880,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:149:14: font_atribute
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:152:14: font_atribute
 					{
 					pushFollow(FOLLOW_font_atribute_in_font_tag477);
 					font_atribute();
@@ -895,7 +898,7 @@ public class GrammarParser extends Parser {
 				
 						builder.appendN(">");
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:153:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:156:3: ( STR | tag )*
 			loop14:
 			while (true) {
 				int alt14=3;
@@ -909,7 +912,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt14) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:153:4: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:156:4: STR
 					{
 					STR4=(Token)match(input,STR,FOLLOW_STR_in_font_tag490); 
 						
@@ -920,7 +923,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:160:4: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:163:4: tag
 					{
 					pushFollow(FOLLOW_tag_in_font_tag505);
 					tag();
@@ -955,13 +958,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "link_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:168:1: link_tag : 'link' '(' link_atribute ')' ( STR | tag )* 'end_link' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:171:1: link_tag : 'link' '(' link_atribute ')' ( STR | tag )* 'end_link' ;
 	public final void link_tag() throws RecognitionException {
 		Token STR5=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:169:2: ( 'link' '(' link_atribute ')' ( STR | tag )* 'end_link' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:169:4: 'link' '(' link_atribute ')' ( STR | tag )* 'end_link'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:172:2: ( 'link' '(' link_atribute ')' ( STR | tag )* 'end_link' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:172:4: 'link' '(' link_atribute ')' ( STR | tag )* 'end_link'
 			{
 
 						builder.levelUp();
@@ -977,7 +980,7 @@ public class GrammarParser extends Parser {
 				
 						builder.appendN(">");
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:177:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:180:3: ( STR | tag )*
 			loop15:
 			while (true) {
 				int alt15=3;
@@ -991,7 +994,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt15) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:177:4: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:180:4: STR
 					{
 					STR5=(Token)match(input,STR,FOLLOW_STR_in_link_tag552); 
 						
@@ -1002,7 +1005,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:184:4: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:187:4: tag
 					{
 					pushFollow(FOLLOW_tag_in_link_tag567);
 					tag();
@@ -1037,13 +1040,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "bold_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:193:1: bold_tag : 'bold' '[' ( STR | tag )* 'end_bold' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:196:1: bold_tag : 'bold' '[' ( STR | tag )* 'end_bold' ;
 	public final void bold_tag() throws RecognitionException {
 		Token STR6=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:194:2: ( 'bold' '[' ( STR | tag )* 'end_bold' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:195:3: 'bold' '[' ( STR | tag )* 'end_bold'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:197:2: ( 'bold' '[' ( STR | tag )* 'end_bold' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:198:3: 'bold' '[' ( STR | tag )* 'end_bold'
 			{
 			match(input,14,FOLLOW_14_in_bold_tag599); 
 			match(input,11,FOLLOW_11_in_bold_tag601); 
@@ -1051,7 +1054,7 @@ public class GrammarParser extends Parser {
 						builder.levelUp();
 						builder.append("<b>");			
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:200:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:203:3: ( STR | tag )*
 			loop16:
 			while (true) {
 				int alt16=3;
@@ -1065,7 +1068,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt16) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:201:3: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:204:3: STR
 					{
 					STR6=(Token)match(input,STR,FOLLOW_STR_in_bold_tag614); 
 						
@@ -1076,7 +1079,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:207:5: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:210:5: tag
 					{
 					pushFollow(FOLLOW_tag_in_bold_tag624);
 					tag();
@@ -1111,13 +1114,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "italic_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:215:1: italic_tag : 'italic' '[' ( STR | tag )* 'end_italic' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:218:1: italic_tag : 'italic' '[' ( STR | tag )* 'end_italic' ;
 	public final void italic_tag() throws RecognitionException {
 		Token STR7=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:216:2: ( 'italic' '[' ( STR | tag )* 'end_italic' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:217:3: 'italic' '[' ( STR | tag )* 'end_italic'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:219:2: ( 'italic' '[' ( STR | tag )* 'end_italic' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:220:3: 'italic' '[' ( STR | tag )* 'end_italic'
 			{
 			match(input,37,FOLLOW_37_in_italic_tag649); 
 			match(input,11,FOLLOW_11_in_italic_tag651); 
@@ -1125,7 +1128,7 @@ public class GrammarParser extends Parser {
 						builder.levelUp();
 						builder.append("<i>");			
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:222:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:225:3: ( STR | tag )*
 			loop17:
 			while (true) {
 				int alt17=3;
@@ -1139,7 +1142,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt17) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:223:3: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:226:3: STR
 					{
 					STR7=(Token)match(input,STR,FOLLOW_STR_in_italic_tag664); 
 						
@@ -1150,7 +1153,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:229:5: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:232:5: tag
 					{
 					pushFollow(FOLLOW_tag_in_italic_tag674);
 					tag();
@@ -1185,13 +1188,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "u_line_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:237:1: u_line_tag : 'u_line' '[' ( STR | tag )* 'end_u_line' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:240:1: u_line_tag : 'u_line' '[' ( STR | tag )* 'end_u_line' ;
 	public final void u_line_tag() throws RecognitionException {
 		Token STR8=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:238:2: ( 'u_line' '[' ( STR | tag )* 'end_u_line' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:239:3: 'u_line' '[' ( STR | tag )* 'end_u_line'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:241:2: ( 'u_line' '[' ( STR | tag )* 'end_u_line' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:242:3: 'u_line' '[' ( STR | tag )* 'end_u_line'
 			{
 			match(input,56,FOLLOW_56_in_u_line_tag700); 
 			match(input,11,FOLLOW_11_in_u_line_tag702); 
@@ -1199,7 +1202,7 @@ public class GrammarParser extends Parser {
 						builder.levelUp();
 						builder.append("<u>");			
 					
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:244:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:247:3: ( STR | tag )*
 			loop18:
 			while (true) {
 				int alt18=3;
@@ -1213,7 +1216,7 @@ public class GrammarParser extends Parser {
 
 				switch (alt18) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:245:3: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:248:3: STR
 					{
 					STR8=(Token)match(input,STR,FOLLOW_STR_in_u_line_tag715); 
 						
@@ -1224,7 +1227,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:251:5: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:254:5: tag
 					{
 					pushFollow(FOLLOW_tag_in_u_line_tag725);
 					tag();
@@ -1259,14 +1262,14 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "font_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:259:1: font_atribute : ( 'color' '(' STR ')' | 'face' '(' STR ')' | 'size' '(' DIGITS ')' );
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:262:1: font_atribute : ( 'color' '(' STR ')' | 'face' '(' STR ')' | 'size' '(' DIGITS ')' );
 	public final void font_atribute() throws RecognitionException {
 		Token STR9=null;
 		Token STR10=null;
 		Token DIGITS11=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:260:2: ( 'color' '(' STR ')' | 'face' '(' STR ')' | 'size' '(' DIGITS ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:263:2: ( 'color' '(' STR ')' | 'face' '(' STR ')' | 'size' '(' DIGITS ')' )
 			int alt19=3;
 			switch ( input.LA(1) ) {
 			case 17:
@@ -1291,7 +1294,7 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt19) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:260:4: 'color' '(' STR ')'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:263:4: 'color' '(' STR ')'
 					{
 					match(input,17,FOLLOW_17_in_font_atribute751); 
 					match(input,9,FOLLOW_9_in_font_atribute753); 
@@ -1304,7 +1307,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:265:4: 'face' '(' STR ')'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:268:4: 'face' '(' STR ')'
 					{
 					match(input,30,FOLLOW_30_in_font_atribute769); 
 					match(input,9,FOLLOW_9_in_font_atribute771); 
@@ -1317,7 +1320,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:270:4: 'size' '(' DIGITS ')'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:273:4: 'size' '(' DIGITS ')'
 					{
 					match(input,51,FOLLOW_51_in_font_atribute785); 
 					match(input,9,FOLLOW_9_in_font_atribute787); 
@@ -1344,16 +1347,16 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "text_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:275:1: text_atribute : 'align' '(' ( 'left' | 'right' | 'center' | 'justify' ) ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:278:1: text_atribute : 'align' '(' ( 'left' | 'right' | 'center' | 'justify' ) ')' ;
 	public final void text_atribute() throws RecognitionException {
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:276:2: ( 'align' '(' ( 'left' | 'right' | 'center' | 'justify' ) ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:277:3: 'align' '(' ( 'left' | 'right' | 'center' | 'justify' ) ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:279:2: ( 'align' '(' ( 'left' | 'right' | 'center' | 'justify' ) ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:280:3: 'align' '(' ( 'left' | 'right' | 'center' | 'justify' ) ')'
 			{
 			match(input,12,FOLLOW_12_in_text_atribute808); 
 			builder.appendPlain(" align=");
 			match(input,9,FOLLOW_9_in_text_atribute814); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:279:4: ( 'left' | 'right' | 'center' | 'justify' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:282:4: ( 'left' | 'right' | 'center' | 'justify' )
 			int alt20=4;
 			switch ( input.LA(1) ) {
 			case 42:
@@ -1383,28 +1386,28 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:280:5: 'left'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:283:5: 'left'
 					{
 					match(input,42,FOLLOW_42_in_text_atribute826); 
 						builder.appendPlain("\"left\"");
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:282:6: 'right'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:285:6: 'right'
 					{
 					match(input,50,FOLLOW_50_in_text_atribute839); 
 						builder.appendPlain("\"right\"");
 					}
 					break;
 				case 3 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:284:6: 'center'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:287:6: 'center'
 					{
 					match(input,16,FOLLOW_16_in_text_atribute852); 
 						builder.appendPlain("\"center\"");
 					}
 					break;
 				case 4 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:286:6: 'justify'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:289:6: 'justify'
 					{
 					match(input,38,FOLLOW_38_in_text_atribute865); 
 						builder.appendPlain("\"justify\"");
@@ -1430,13 +1433,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "image_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:291:1: image_atribute : ( 'align' '(' ( 'top' | 'bottom' | 'left' | 'right' | 'middle' ) ')' | 'height' '(' DIGITS ')' | 'width' '(' DIGITS ')' );
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:294:1: image_atribute : ( 'align' '(' ( 'top' | 'bottom' | 'left' | 'right' | 'middle' ) ')' | 'height' '(' DIGITS ')' | 'width' '(' DIGITS ')' );
 	public final void image_atribute() throws RecognitionException {
 		Token DIGITS12=null;
 		Token DIGITS13=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:292:2: ( 'align' '(' ( 'top' | 'bottom' | 'left' | 'right' | 'middle' ) ')' | 'height' '(' DIGITS ')' | 'width' '(' DIGITS ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:295:2: ( 'align' '(' ( 'top' | 'bottom' | 'left' | 'right' | 'middle' ) ')' | 'height' '(' DIGITS ')' | 'width' '(' DIGITS ')' )
 			int alt22=3;
 			switch ( input.LA(1) ) {
 			case 12:
@@ -1461,12 +1464,12 @@ public class GrammarParser extends Parser {
 			}
 			switch (alt22) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:293:3: 'align' '(' ( 'top' | 'bottom' | 'left' | 'right' | 'middle' ) ')'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:296:3: 'align' '(' ( 'top' | 'bottom' | 'left' | 'right' | 'middle' ) ')'
 					{
 					match(input,12,FOLLOW_12_in_image_atribute897); 
 					builder.appendPlain(" align=");
 					match(input,9,FOLLOW_9_in_image_atribute904); 
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:295:6: ( 'top' | 'bottom' | 'left' | 'right' | 'middle' )
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:298:6: ( 'top' | 'bottom' | 'left' | 'right' | 'middle' )
 					int alt21=5;
 					switch ( input.LA(1) ) {
 					case 55:
@@ -1501,35 +1504,35 @@ public class GrammarParser extends Parser {
 					}
 					switch (alt21) {
 						case 1 :
-							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:295:7: 'top'
+							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:298:7: 'top'
 							{
 							match(input,55,FOLLOW_55_in_image_atribute913); 
 								builder.appendPlain("\"top\"");
 							}
 							break;
 						case 2 :
-							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:297:8: 'bottom'
+							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:300:8: 'bottom'
 							{
 							match(input,15,FOLLOW_15_in_image_atribute930); 
 								builder.appendPlain("\"" + "bottom" + "\"");
 							}
 							break;
 						case 3 :
-							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:299:8: 'left'
+							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:302:8: 'left'
 							{
 							match(input,42,FOLLOW_42_in_image_atribute947); 
 								builder.appendPlain("\"" + "left" + "\"");
 							}
 							break;
 						case 4 :
-							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:301:8: 'right'
+							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:304:8: 'right'
 							{
 							match(input,50,FOLLOW_50_in_image_atribute965); 
 								builder.appendPlain("\"" + "right" + "\"");
 							}
 							break;
 						case 5 :
-							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:303:8: 'middle'
+							// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:306:8: 'middle'
 							{
 							match(input,45,FOLLOW_45_in_image_atribute983); 
 								builder.appendPlain("\"" + "middle" + "\"");
@@ -1542,7 +1545,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:307:4: 'height' '(' DIGITS ')'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:310:4: 'height' '(' DIGITS ')'
 					{
 					match(input,33,FOLLOW_33_in_image_atribute1009); 
 					match(input,9,FOLLOW_9_in_image_atribute1011); 
@@ -1552,7 +1555,7 @@ public class GrammarParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:308:4: 'width' '(' DIGITS ')'
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:311:4: 'width' '(' DIGITS ')'
 					{
 					match(input,57,FOLLOW_57_in_image_atribute1023); 
 					match(input,9,FOLLOW_9_in_image_atribute1025); 
@@ -1577,13 +1580,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "source_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:311:1: source_atribute : 'source' '(' STR ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:314:1: source_atribute : 'source' '(' STR ')' ;
 	public final void source_atribute() throws RecognitionException {
 		Token STR14=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:312:2: ( 'source' '(' STR ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:313:3: 'source' '(' STR ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:315:2: ( 'source' '(' STR ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:316:3: 'source' '(' STR ')'
 			{
 			match(input,52,FOLLOW_52_in_source_atribute1049); 
 			match(input,9,FOLLOW_9_in_source_atribute1051); 
@@ -1609,13 +1612,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "link_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:320:1: link_atribute : 'href' '(' STR ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:323:1: link_atribute : 'href' '(' STR ')' ;
 	public final void link_atribute() throws RecognitionException {
 		Token STR15=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:321:2: ( 'href' '(' STR ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:322:3: 'href' '(' STR ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:324:2: ( 'href' '(' STR ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:325:3: 'href' '(' STR ')'
 			{
 			match(input,34,FOLLOW_34_in_link_atribute1073); 
 			match(input,9,FOLLOW_9_in_link_atribute1075); 
@@ -1641,11 +1644,11 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "relation_tag"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:332:1: relation_tag : 'relation' '(' relation_atribute ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:335:1: relation_tag : 'relation' '(' relation_atribute ')' ;
 	public final void relation_tag() throws RecognitionException {
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:333:2: ( 'relation' '(' relation_atribute ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:334:3: 'relation' '(' relation_atribute ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:336:2: ( 'relation' '(' relation_atribute ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:337:3: 'relation' '(' relation_atribute ')'
 			{
 			match(input,49,FOLLOW_49_in_relation_tag1108); 
 			match(input,9,FOLLOW_9_in_relation_tag1110); 
@@ -1670,15 +1673,15 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "relation_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:336:1: relation_atribute : 'source' '(' sources= STR ')' 'target' '(' target= STR ')' 'name' '(' name= STR ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:339:1: relation_atribute : 'source' '(' sources= STR ')' 'target' '(' target= STR ')' 'name' '(' name= STR ')' ;
 	public final void relation_atribute() throws RecognitionException {
 		Token sources=null;
 		Token target=null;
 		Token name=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:337:2: ( 'source' '(' sources= STR ')' 'target' '(' target= STR ')' 'name' '(' name= STR ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:338:3: 'source' '(' sources= STR ')' 'target' '(' target= STR ')' 'name' '(' name= STR ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:340:2: ( 'source' '(' sources= STR ')' 'target' '(' target= STR ')' 'name' '(' name= STR ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:341:3: 'source' '(' sources= STR ')' 'target' '(' target= STR ')' 'name' '(' name= STR ')'
 			{
 			match(input,52,FOLLOW_52_in_relation_atribute1131); 
 			match(input,9,FOLLOW_9_in_relation_atribute1133); 
@@ -1708,13 +1711,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "key_Subject"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:343:1: key_Subject : 'key_subject' '(' subject_atribute ')' ( STR | tag )* 'end_key_subject' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:346:1: key_Subject : 'key_subject' '(' subject_atribute ')' ( STR | tag )* 'end_key_subject' ;
 	public final void key_Subject() throws RecognitionException {
 		Token STR16=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:344:2: ( 'key_subject' '(' subject_atribute ')' ( STR | tag )* 'end_key_subject' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:345:3: 'key_subject' '(' subject_atribute ')' ( STR | tag )* 'end_key_subject'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:347:2: ( 'key_subject' '(' subject_atribute ')' ( STR | tag )* 'end_key_subject' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:348:3: 'key_subject' '(' subject_atribute ')' ( STR | tag )* 'end_key_subject'
 			{
 			match(input,40,FOLLOW_40_in_key_Subject1186); 
 			match(input,9,FOLLOW_9_in_key_Subject1188); 
@@ -1723,7 +1726,7 @@ public class GrammarParser extends Parser {
 			state._fsp--;
 
 			match(input,10,FOLLOW_10_in_key_Subject1192); 
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:346:3: ( STR | tag )*
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:349:3: ( STR | tag )*
 			loop23:
 			while (true) {
 				int alt23=3;
@@ -1737,14 +1740,14 @@ public class GrammarParser extends Parser {
 
 				switch (alt23) {
 				case 1 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:346:4: STR
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:349:4: STR
 					{
 					STR16=(Token)match(input,STR,FOLLOW_STR_in_key_Subject1197); 
 						builder.append((STR16!=null?STR16.getText():null));
 					}
 					break;
 				case 2 :
-					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:347:5: tag
+					// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:350:5: tag
 					{
 					pushFollow(FOLLOW_tag_in_key_Subject1205);
 					tag();
@@ -1775,13 +1778,13 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "subject_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:352:1: subject_atribute : 'id' '(' id= STR ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:355:1: subject_atribute : 'id' '(' id= STR ')' ;
 	public final void subject_atribute() throws RecognitionException {
 		Token id=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:353:2: ( 'id' '(' id= STR ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:354:3: 'id' '(' id= STR ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:356:2: ( 'id' '(' id= STR ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:357:3: 'id' '(' id= STR ')'
 			{
 			match(input,35,FOLLOW_35_in_subject_atribute1227); 
 			match(input,9,FOLLOW_9_in_subject_atribute1229); 
@@ -1803,14 +1806,14 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "key_Text"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:357:1: key_Text : 'key_text' '(' 'id' '(' id= STR ')' ')' txt= STR 'end_key_text' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:360:1: key_Text : 'key_text' '(' 'id' '(' id= STR ')' ')' txt= STR 'end_key_text' ;
 	public final void key_Text() throws RecognitionException {
 		Token id=null;
 		Token txt=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:358:2: ( 'key_text' '(' 'id' '(' id= STR ')' ')' txt= STR 'end_key_text' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:359:3: 'key_text' '(' 'id' '(' id= STR ')' ')' txt= STR 'end_key_text'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:361:2: ( 'key_text' '(' 'id' '(' id= STR ')' ')' txt= STR 'end_key_text' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:362:3: 'key_text' '(' 'id' '(' id= STR ')' ')' txt= STR 'end_key_text'
 			{
 			match(input,41,FOLLOW_41_in_key_Text1253); 
 			match(input,9,FOLLOW_9_in_key_Text1255); 
@@ -1838,11 +1841,11 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "key_Image"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:364:1: key_Image : 'key_image' '(' key_image_atribute ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:367:1: key_Image : 'key_image' '(' key_image_atribute ')' ;
 	public final void key_Image() throws RecognitionException {
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:365:2: ( 'key_image' '(' key_image_atribute ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:366:3: 'key_image' '(' key_image_atribute ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:368:2: ( 'key_image' '(' key_image_atribute ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:369:3: 'key_image' '(' key_image_atribute ')'
 			{
 
 						builder.levelUp();
@@ -1875,14 +1878,14 @@ public class GrammarParser extends Parser {
 
 
 	// $ANTLR start "key_image_atribute"
-	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:377:1: key_image_atribute : 'id' '(' id= STR ')' 'source' '(' source= STR ')' ;
+	// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:380:1: key_image_atribute : 'id' '(' id= STR ')' 'source' '(' source= STR ')' ;
 	public final void key_image_atribute() throws RecognitionException {
 		Token id=null;
 		Token source=null;
 
 		try {
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:378:2: ( 'id' '(' id= STR ')' 'source' '(' source= STR ')' )
-			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:379:3: 'id' '(' id= STR ')' 'source' '(' source= STR ')'
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:381:2: ( 'id' '(' id= STR ')' 'source' '(' source= STR ')' )
+			// /Users/morpheby/Documents/workspace/volynets-HTML-antlr/src/hello/Grammar.g:382:3: 'id' '(' id= STR ')' 'source' '(' source= STR ')'
 			{
 			match(input,35,FOLLOW_35_in_key_image_atribute1331); 
 			match(input,9,FOLLOW_9_in_key_image_atribute1333); 
