@@ -11,7 +11,6 @@ import org.antlr.runtime.RecognitionException;
 import browser.*;
 import chrriis.dj.nativeswing.swtimpl.NativeInterface;
 
-import search.*;
 public class Test {
 
 	public static void main(String[] args) throws RecognitionException, IOException {			

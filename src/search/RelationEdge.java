@@ -5,6 +5,8 @@ import hello.ParserBuilder;
 import org.jgraph.graph.DefaultEdge;
 
 public class RelationEdge  extends DefaultEdge{
+
+	private static final long serialVersionUID = 1L;
 	private String relationName;
 
 	public RelationEdge(KeyNode from, KeyNode to, String name) {
