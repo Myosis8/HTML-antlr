@@ -7,6 +7,7 @@ import hello.QueryParserLexer;
 import hello.QueryParserParser;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -90,6 +91,7 @@ public class SimpleWebBrowserExample extends JFrame {
 		// webBrowserPanel.setBorder(BorderFactory.createTitledBorder("Native Web Browser component"));
 		webBrowser = new JWebBrowser();
 		webBrowser.setButtonBarVisible(false);
+		
 		webBrowser.addWebBrowserListener(new WebBrowserListener() {
 
 			public void windowWillOpen(WebBrowserWindowWillOpenEvent arg0) {
@@ -172,14 +174,17 @@ public class SimpleWebBrowserExample extends JFrame {
 		webBrowserPanel.add(searchField, BorderLayout.PAGE_START);
 		JButton setSearchDirectory = new JButton("SetSearchDirectory");
 		webBrowserPanel.add(setSearchDirectory, BorderLayout.PAGE_END);
-		JButton search = new JButton("Поиск");
 		
-		webBrowserPanel.add(search, BorderLayout.WEST);
+		JButton search = new JButton("Поиск");
+		search.setBackground(Color.WHITE);
+		
+		webBrowserPanel.add(search, BorderLayout.PAGE_END);
 		add(webBrowserPanel, BorderLayout.CENTER);
 
 		setSearchDirectory.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				searchDirectory = searchField.getText();
+
 				SearchGraph.clearSearchGraph();
 				SearchGraph.getSearchGraph();
 				ArrayList<TempEdge> edges = new ArrayList<TempEdge>();
