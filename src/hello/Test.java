@@ -11,7 +11,6 @@ import org.antlr.runtime.RecognitionException;
 import browser.*;
 import chrriis.dj.nativeswing.swtimpl.NativeInterface;
 
-import search.*;
 public class Test {
 
 	public static void main(String[] args) throws RecognitionException, IOException {			
@@ -37,6 +36,7 @@ public class Test {
 		 SwingUtilities.invokeLater(new Runnable() {   
 		      public void run() {   
 		    	 try {
+					@SuppressWarnings("unused")
 					SimpleWebBrowserExample browser = new SimpleWebBrowserExample();
 					/*KeyNode node1 = new KeyText("Hello", "How it's gonna be");
 					KeyNode node2 = new KeyText("Everything going to be ok", "Everything going to be ok");
