@@ -1,11 +1,3 @@
-/*
- * main.java
- * html-antlr
- * 
- * Created by Илья Михальцов on 2013-06-23.
- * Copyright 2013 Илья Михальцов. All rights reserved.
- */
-
 package browser;
 
 import browser.SimpleWebBrowserExample;
