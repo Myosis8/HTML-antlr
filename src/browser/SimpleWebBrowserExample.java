@@ -173,14 +173,18 @@ public class SimpleWebBrowserExample extends JFrame {
 
 	private void initSearchStuff(JPanel webBrowserPanel) {
 		searchField = new JTextField("");
+		
 		webBrowserPanel.add(searchField, BorderLayout.PAGE_START);
-		JButton setSearchDirectory = new JButton("SetSearchDirectory");
+
 		Panel buttons = new Panel();
+		buttons.setBackground(Color.WHITE);
+		
+		JButton setSearchDirectory = new JButton("SetSearchDirectory");
+		setSearchDirectory.setBackground(Color.WHITE);
 		buttons.add(setSearchDirectory);
 		
 		JButton search = new JButton("Поиск");
 		search.setBackground(Color.WHITE);
-		
 		buttons.add(search);
 		
 		webBrowserPanel.add(buttons, BorderLayout.PAGE_END);
