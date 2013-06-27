@@ -11,8 +11,6 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
-import hello.GrammarLexer;
-import hello.GrammarParser;
 import hello.SearchParserLexer;
 import hello.SearchParserParser;
 

@@ -72,6 +72,7 @@ public class SimpleWebBrowserExample extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setMinimumSize(size);
 		setLayout(new BorderLayout());
+		setBackground(Color.ORANGE);
 		setVisible(true);
 		addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -91,7 +92,7 @@ public class SimpleWebBrowserExample extends JFrame {
 		// webBrowserPanel.setBorder(BorderFactory.createTitledBorder("Native Web Browser component"));
 		webBrowser = new JWebBrowser();
 		webBrowser.setButtonBarVisible(false);
-		
+		webBrowser.setBackground(Color.cyan);
 		webBrowser.addWebBrowserListener(new WebBrowserListener() {
 
 			public void windowWillOpen(WebBrowserWindowWillOpenEvent arg0) {
