@@ -39,7 +39,8 @@ class Main {
 				{
 				    try
 				    {
-				  	  SimpleWebBrowserExample browser = new SimpleWebBrowserExample();
+				  	  @SuppressWarnings("unused")
+					SimpleWebBrowserExample browser = new SimpleWebBrowserExample();
 				    }
 				    catch(Exception e) {
 				        
