@@ -40,7 +40,7 @@ public class DirectoryParser {
     }
 
     private boolean isItMyFile (String str){
-		return str.endsWith(".biv");
+		return str.endsWith(".serge");
 	} 
     
     void scanDirectory(File directory){
