@@ -52,7 +52,10 @@ import chrriis.dj.nativeswing.swtimpl.components.WebBrowserWindowOpeningEvent;
 import chrriis.dj.nativeswing.swtimpl.components.WebBrowserWindowWillOpenEvent;
 
 public class SimpleWebBrowserExample extends JFrame {
-
+	private static final String PROTOCOL_PREFIX = "file://";
+	private static final String FILESEP = java.io.File.separator;
+	private static final String SITE_DIRECTORY = System.getProperty("user.dir") + FILESEP + "OS";
+	private static final String START_PAGE = PROTOCOL_PREFIX + SITE_DIRECTORY + FILESEP + "Ch1.serge";
 	private static final long serialVersionUID = 1L;
 	private JWebBrowser webBrowser;
 	private String currentString = new String("hello");
@@ -119,24 +122,23 @@ public class SimpleWebBrowserExample extends JFrame {
 			}
 
 			public void locationChanged(WebBrowserNavigationEvent arg0) {
-				String newLocation = webBrowser.getResourceLocation()
-						.substring(8);
+				String newLocation = webBrowser.getResourceLocation();
 				if (isItMyFile(newLocation)) {
 					arg0.consume();
 					if (isItMyFile(currentString)) {
 						delete(currentString + ".parsed.html");
 					}
-					currentString = newLocation;
+					currentString = newLocation.substring(newLocation.indexOf("://")+3);
 					parse();
 					write(currentString, resultString);
 					SwingUtilities.invokeLater(new Runnable() {
 						public void run() {
-							webBrowser.navigate(currentString
+							webBrowser.navigate(PROTOCOL_PREFIX + currentString
 									+ ".parsed.html");
 						}
 					});
 
-					// webBrowser.navigate(currentString+".parsed.html");
+//					 webBrowser.navigate(currentString+".parsed.html");
 				} else {
 					arg0.consume();
 				}
@@ -157,7 +159,7 @@ public class SimpleWebBrowserExample extends JFrame {
 
 			}
 		});
-		webBrowser.navigate("S:\\Site\\SolarSystem.serge");
+		webBrowser.navigate(START_PAGE);
 		webBrowser.setBarsVisible(true);
 		webBrowserPanel.add(webBrowser, BorderLayout.CENTER);
 
@@ -212,9 +214,9 @@ public class SimpleWebBrowserExample extends JFrame {
 				} catch (RecognitionException e1) {
 					e1.printStackTrace();
 				}
-				write(searchDirectory + "\\SearchResult.serge", search(query));
-				currentString = searchDirectory + "\\SearchResult.serge";
-				webBrowser.navigate(currentString + ".parsed.html");
+				write(searchDirectory + FILESEP + "SearchResult.serge", search(query));
+				currentString = searchDirectory + FILESEP + "SearchResult.serge";
+				webBrowser.navigate(PROTOCOL_PREFIX + currentString + ".parsed.html");
 			}
 		});
 	}
